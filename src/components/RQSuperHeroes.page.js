@@ -10,8 +10,9 @@ export const RQSuperHeroesPage = () => {
     "use",
     fetch,
      { 
-      refetchOnMount:true,
-      refetchOnWindowFocus:true
+        refetchInterval:2000,  //refetch after 2 sec
+       refetchIntervalInBackground:true
+
      }
   );
 
