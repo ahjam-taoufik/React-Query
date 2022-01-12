@@ -8,8 +8,7 @@ import NavBar from "./NavBar";
 function App() {
   return (
     <>
-      <NavBar/>
-      
+      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/super" element={<SuperHeroesPage />}></Route>
