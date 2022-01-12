@@ -1,23 +1,31 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-
-const fetch=()=>{
-    return axios.get("http://localhost:4000/superheroes");
-}
+const fetch = () => {
+  return axios.get("http://localhost:4000/superheroes");
+};
 
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data ,isError,error,isFetching } = useQuery("use", fetch,{cacheTime:5000})
-  
-  //console.log(isLoading,isFetching);
-  
-  if(isLoading){
-        return <h3>Loading ....</h3>
+  const { isLoading, data, isError, error, isFetching } = useQuery(
+    "use",
+    fetch,
+     { 
+      staleTime: 60000 //do not Fetching after 60 sec
      }
+  );
 
-     if (isError) {
-         return <h3>{error.message}</h3>
-     }
+  console.log(isLoading,isFetching);
+
+  if (isLoading) {
+    return <h3>Loading ....</h3>;
+  }
+  if (isFetching) {
+    return <h3>Loading ....</h3>;
+  }
+
+  if (isError) {
+    return <h3>{error.message}</h3>;
+  }
 
   return (
     <>
