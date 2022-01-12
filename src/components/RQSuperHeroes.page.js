@@ -10,7 +10,8 @@ export const RQSuperHeroesPage = () => {
     "use",
     fetch,
      { 
-      staleTime: 60000 //do not Fetching after 60 sec
+      refetchOnMount:true,
+      refetchOnWindowFocus:true
      }
   );
 
