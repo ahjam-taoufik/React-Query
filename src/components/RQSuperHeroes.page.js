@@ -6,12 +6,24 @@ const fetch = () => {
 };
 
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error, isFetching,refetch } = useQuery(
+
+const onSuccess=()=>{
+    console.log('receve data successfuly');
+}    
+
+
+const onError=()=>{
+    console.log('error on receve data');
+}    
+
+
+
+  const { isLoading, data, isError, error, isFetching } = useQuery(
     "use",
     fetch,
      { 
-       enabled:false // step one :Disable refech automatic when you want 
-                     // to useQuery on click
+       onError:onError ,
+       onSuccess:onSuccess,
 
      }
   );
@@ -31,7 +43,6 @@ export const RQSuperHeroesPage = () => {
 
   return (
     <>
-       <button onClick={refetch}>fetch</button> 
       <h3>your data</h3>
       {data?.data.map((d) => {
         return <h4 key={d.id}>{d.name}</h4>;
