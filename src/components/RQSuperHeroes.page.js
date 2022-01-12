@@ -7,8 +7,11 @@ const fetch=()=>{
 }
 
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data ,isError,error } = useQuery("use", fetch)
-    if(isLoading){
+  const { isLoading, data ,isError,error,isFetching } = useQuery("use", fetch,{cacheTime:5000})
+  
+  //console.log(isLoading,isFetching);
+  
+  if(isLoading){
         return <h3>Loading ....</h3>
      }
 
