@@ -15,7 +15,21 @@
         "name": "Wonder Woman",
         "alterEgo": "Princess Diana"
       }
+    ],
+
+    "users": [
+      {
+        "id": "toto@example.com",
+        "channelId": "tfk"
+      }
+    ],
+    "channels": [
+      {
+        "id": "tfk",
+        "courses": ["react", "jsc", "php"]
+      }
     ]
+
   }
 
   
