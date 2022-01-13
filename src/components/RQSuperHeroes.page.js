@@ -1,32 +1,22 @@
-import axios from "axios";
-import { useQuery } from "react-query";
+import { useSuperHeroes } from "../Hooks/useSuperHeroes";
 
-const fetch = () => {
-  return axios.get("http://localhost:4000/superheroes");
-};
+
+
 
 export const RQSuperHeroesPage = () => {
 
-const onSuccess=()=>{
-    console.log('receve data successfuly');
+const onSuccess=(data)=>{
+    console.log('receve data successfuly',data);
 }    
 
 
-const onError=()=>{
-    console.log('error on receve data');
+const onError=(error)=>{
+    console.log('error on receve data',error);
 }    
 
 
 
-  const { isLoading, data, isError, error, isFetching } = useQuery(
-    "use",
-    fetch,
-     { 
-       onError:onError ,
-       onSuccess:onSuccess,
-
-     }
-  );
+  const { isLoading, data, isError, error, isFetching } = useSuperHeroes(onSuccess,onError)
 
   console.log(isLoading,isFetching);
 
