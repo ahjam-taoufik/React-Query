@@ -9,7 +9,11 @@ const fetch = () => {
 
 export  const useSuperHeroes = (onSuccess,onError) => {
     
-   return useQuery("use",fetch, { onError:onError ,onSuccess:onSuccess, });
+   return useQuery("use",fetch,
+    {
+        // onError:onError ,
+        // onSuccess:onSuccess,
+     });
 }
 
 
