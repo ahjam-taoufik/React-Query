@@ -9,7 +9,7 @@ const fetchColors = pageNumber => {
 export const PaginatedQueriesPage = () => {
   const [pageNumber, setPageNumber] = useState(1)
   const { isLoading, isError, error, data, isFetching } = useQuery(
-    ['colors', pageNumber],
+    ['user', pageNumber],
     () => fetchColors(pageNumber),
     {
       keepPreviousData: true
