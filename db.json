@@ -28,6 +28,48 @@
         "id": "tfk",
         "courses": ["react", "jsc", "php"]
       }
+    ],
+    "colors": [
+      {
+        "id": 1,
+        "label": "ali"
+      },
+      {
+        "id": 2,
+        "label": "taoufik"
+      },
+      {
+        "id": 3,
+        "label": "aicha"
+      },
+      {
+        "id": 4,
+        "label": "mostapha"
+      },
+      {
+        "id": 5,
+        "label": "meriem"
+      },
+      {
+        "id": 6,
+        "label": "mohammed"
+      },
+      {
+        "id": 7,
+        "label": "said"
+      },
+      {
+        "id": 8,
+        "label": "saida"
+      },
+      {
+        "id": 9,
+        "label": "said"
+      },
+      {
+        "id": 10,
+        "label": "malak"
+      }
     ]
 
   }

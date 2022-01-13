@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery} from "react-query";
 import axios from "axios";
 
 
@@ -8,8 +8,9 @@ const fetch = (Id) => {
 
 
 export  const useSuperHeroe = (Id) => {
-    
+ 
    return useQuery(["use",Id],()=> fetch(Id));
 }
+
 
 
